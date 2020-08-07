@@ -1,0 +1,23 @@
+{
+    "name": "adamarthurf/framework",
+	"type": "library",
+    "description": "System Core for Arthur Framework",
+	"keywords": ["adam","arthur","framework"],
+	"homepage": "https://github.com/adamarthurf/framework",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Adam Arthur Faizal",
+			"email": "adam.faizal.af6@student.uns.ac.id",
+			"role": "Web Developer"
+		}
+	],
+    "require": {
+        "php": "^7.3"
+    },
+	"autoload": {
+		"psr-4": {
+			"Core\\": "System/Core"
+		}
+	}
+}

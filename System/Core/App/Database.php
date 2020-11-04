@@ -4,10 +4,10 @@ use PDO;
 use PDOException;
 
 class Database {
-    private string $host = 'localhost';
-    private string $username = 'root';
-    private string $password = 'namaku123';
-    private string $database = 'phpdasar';
+    private string $host = HOST;
+    private string $username = USERNAME;
+    private string $password = PASSWORD;
+    private string $database = DATABASE;
     private PDO $db_handler;
     private object $statement;
 
@@ -29,8 +29,10 @@ class Database {
 
     /**
      * @param string $query
+     * @return void
      */
-    public function prepare(string $query): void {
+    public function prepare(string $query): void
+    {
         $this->statement = $this->db_handler->prepare($query);
     }
 
@@ -39,7 +41,8 @@ class Database {
      * @param $value
      * @param null $type
      */
-    public function bind($param, $value, $type = null): void {
+    public function bind($param, $value, $type = null): void
+    {
         if (is_null($type)):
             switch (true) {
                 case is_int($value):
@@ -58,6 +61,9 @@ class Database {
         $this->statement->bindValue($param, $value, $type);
     }
 
+    /**
+     * @return void
+     */
     public function execute(): void {
         $this->statement->execute();
     }
@@ -65,21 +71,24 @@ class Database {
     /**
      * @return array
      */
-    public function fetchAll(): array {
+    public function fetchAll(): array
+    {
         return $this->statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
     /**
      * @return array
      */
-    public function fetch(): array {
+    public function fetch(): array
+    {
         return $this->statement->fetch(PDO::FETCH_ASSOC);
     }
 
     /**
      * @return int
      */
-    public function rowCount(): int {
+    public function rowCount(): int
+    {
         return $this->statement->rowCount();
     }
 

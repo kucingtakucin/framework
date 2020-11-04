@@ -4,6 +4,9 @@ namespace Core\App;
 use RuntimeException;
 
 abstract class Controller {
+    /**
+     * @var string
+     */
     protected string $className;
 
     /**
@@ -25,7 +28,8 @@ abstract class Controller {
      * @return $this|object
      * @throws RuntimeException
      */
-    public function __call($name, $arguments): object {
+    public function __call($name, $arguments): object
+    {
         if ($name === 'model') {
             switch (count($arguments)) {
                 case 0:
@@ -53,7 +57,8 @@ abstract class Controller {
      * @param string $view
      * @param array $data
      */
-    public function view(string $view, array $data = []): void{
+    public function view(string $view, array $data = []): void
+    {
         require_once "App/Views/Templates/header.php";
         require_once "App/Views/{$this->className}/{$view}.php";
         require_once "App/Views/Templates/footer.php";

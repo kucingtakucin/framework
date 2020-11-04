@@ -2,7 +2,14 @@
 namespace Core\App;
 
 abstract class Model {
+    /**
+     * @var Database
+     */
     protected Database $db;
+
+    /**
+     * @var string
+     */
     protected string $tableName;
 
     /**

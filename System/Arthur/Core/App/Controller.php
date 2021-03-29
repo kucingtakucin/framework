@@ -55,7 +55,10 @@ abstract class Controller {
     /**
      * @return mixed
      */
-    abstract public function index();
+    public function index()
+    {
+        
+    }
 
     /**
      * @param string $view
@@ -81,20 +84,32 @@ abstract class Controller {
     /**
      * @return mixed
      */
-    abstract public function show();
+    public function show()
+    {
+
+    }
 
     /**
      * @return mixed
      */
-    abstract public function insert();
+    public function insert()
+    {
+
+    }
 
     /**
      * @return mixed
      */
-    abstract public function update();
+    public function update()
+    {
+
+    }
 
     /**
      * @return mixed
      */
-    abstract public function delete();
+    public function delete()
+    {
+
+    }
 }

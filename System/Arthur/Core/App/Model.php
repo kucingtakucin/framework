@@ -51,12 +51,18 @@ abstract class Model {
     /**
      * @return int
      */
-    abstract public function add(): int;
+    public function add()
+    {
+
+    }
 
     /**
      * @return int
      */
-    abstract public function save(): int;
+    public function save()
+    {
+
+    }
 
     /**
      * @param $id
@@ -73,5 +79,8 @@ abstract class Model {
     /**
      * @return mixed
      */
-    abstract public function look();
+    public function look()
+    {
+
+    }
 }

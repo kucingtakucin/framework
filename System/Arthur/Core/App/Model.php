@@ -1,5 +1,5 @@
 <?php
-namespace Core\App;
+namespace Arthur\Core\App;
 
 abstract class Model {
     /**
@@ -65,4 +65,9 @@ abstract class Model {
         $this->db->execute();
         return $this->db->rowCount();
     }
+
+    /**
+     * @return mixed
+     */
+    abstract public function look();
 }

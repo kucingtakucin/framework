@@ -1,5 +1,5 @@
 <?php
-namespace Core\App;
+namespace Arthur\Core\App;
 
 use RuntimeException;
 
@@ -63,4 +63,34 @@ abstract class Controller {
         require_once "App/Views/{$this->className}/{$view}.php";
         require_once "App/Views/Templates/footer.php";
     }
+
+    /**
+     * @param string $url
+     * @return void
+     */
+    public function redirect(string $url): void
+    {
+        header('Location: ' . BASE_URL . $url);
+        exit(0);
+    }
+
+    /**
+     * @return mixed
+     */
+    abstract public function show();
+
+    /**
+     * @return mixed
+     */
+    abstract public function insert();
+
+    /**
+     * @return mixed
+     */
+    abstract public function update();
+
+    /**
+     * @return mixed
+     */
+    abstract public function delete();
 }

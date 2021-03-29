@@ -1,5 +1,5 @@
 <?php
-namespace Core\Helper;
+namespace Arthur\Core\Helper;
 
 class Flasher {
 

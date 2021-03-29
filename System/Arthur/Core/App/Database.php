@@ -1,5 +1,5 @@
 <?php
-namespace Core\App;
+namespace Arthur\Core\App;
 use PDO;
 use PDOException;
 

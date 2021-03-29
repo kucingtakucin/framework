@@ -57,7 +57,7 @@ abstract class Controller {
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -108,7 +108,7 @@ abstract class Controller {
     /**
      * @return mixed
      */
-    public function delete()
+    public function delete($id)
     {
 
     }

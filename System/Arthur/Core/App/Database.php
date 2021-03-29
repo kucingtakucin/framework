@@ -3,6 +3,11 @@ namespace Arthur\Core\App;
 use PDO;
 use PDOException;
 
+/**
+ * @author Adam Arthur Faizal
+ *
+ **/
+
 class Database {
     private string $host = HOST;
     private string $username = USERNAME;

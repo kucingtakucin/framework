@@ -1,6 +1,10 @@
 <?php
 namespace Arthur\Core\Helper;
 
+/**
+ * @author Adam Arthur Faizal
+ *
+ **/
 class Flasher {
 
     /**

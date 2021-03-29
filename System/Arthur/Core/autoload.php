@@ -1,4 +1,9 @@
 <?php
+/**
+ * @author Adam Arthur Faizal
+ *
+ **/
+
 spl_autoload_register(static function ($class) {
     $array = explode('\\', $class);
     $file = __DIR__ . "/App/" . end($array) . ".php";

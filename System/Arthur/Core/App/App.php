@@ -1,5 +1,9 @@
 <?php
 namespace Arthur\Core\App;
+/**
+ * @author Adam Arthur Faizal
+ *
+ **/
 
 class App {
     /**

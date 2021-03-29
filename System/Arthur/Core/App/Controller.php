@@ -2,6 +2,10 @@
 namespace Arthur\Core\App;
 
 use RuntimeException;
+/**
+ * @author Adam Arthur Faizal
+ *
+ **/
 
 abstract class Controller {
     /**
